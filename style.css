@@ -49,7 +49,7 @@ main {
   display: flex;
 }
 
-#label-family {
+#div-label-radio {
   display: flex;
   flex-direction: column;
 }
