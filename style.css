@@ -35,11 +35,12 @@ main {
   display: flex;
 }
 
-main form {
+#evaluation-form {
   display: flex;
   width: 675px;
+  flex-direction: column;
 }
 
-#evaluation-form {
-  flex-direction: column;
+#trybewarts-forms-logo {
+  height: 500px;
 }
