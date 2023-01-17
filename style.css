@@ -9,6 +9,24 @@
   justify-content: space-between;
 }
 
+.trybewarts-header-logo {
+  width: 100px;
+}
+
+.trybewarts-login input {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 0 2px;
+}
+
+.trybewarts-login button {
+  width: 100px;
+  height: 33px;
+  border-radius: 5px;
+  margin: 0 7px;
+}
+
 .trybewarts-login {
   display: flex;
 }
