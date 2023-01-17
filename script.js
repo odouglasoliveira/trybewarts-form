@@ -2,6 +2,7 @@ const button = document.getElementById('button-form');
 const btnSubmit = document.getElementById('submit-btn');
 const checkbox = document.getElementById('agreement');
 const textarea = document.getElementById('textarea');
+const contadora = document.getElementById('counter')
 
 function checkForm() {
   const email = document.getElementById('email');
@@ -25,14 +26,14 @@ function activeBtn() {
 
 checkbox.addEventListener('click', activeBtn);
 
-//tentativa requisito 20
+function contagem() {
+  let cont = 500 - textarea.value.length;
+  contadora.innerHTML = cont;
+}
 
-// function contagem(event) {
-//   let cont = textarea.value.length;
-// }
-
-// textarea.addEventListener('input', contagem);
+textarea.addEventListener('input', contagem);
 
 window.onload = () => {
   btnSubmit.disabled = true;
+  contadora.innerHTML = 500
 };
