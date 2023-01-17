@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Inknut Antiqua', serif;
 }
 
 .header {
@@ -62,3 +63,4 @@ main {
 #preferencias {
   display: flex;
 }
+
