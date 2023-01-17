@@ -7,35 +7,24 @@
   display: flex;
   background-color: rgb(50, 167, 145);
   justify-content: space-between;
-  align-items: center;
-}
-
-.header h1 {
-  font-size: 40px;
-  color: white;
 }
 
 .trybewarts-header-logo {
-  width: 60px;
-  padding: 10px;
+  width: 100px;
 }
 
 .trybewarts-login input {
-  width: 150px;
-  height: 40px;
-  padding-left: 10px;
-  border-radius: 8px;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
   margin: 0 2px;
 }
 
 .trybewarts-login button {
-  width: 150px;
-  height: 43px;
-  border-radius: 8px;
+  width: 100px;
+  height: 33px;
+  border-radius: 5px;
   margin: 0 7px;
-  background-color: rgb(32, 32, 112);
-  color: white;
-  font-weight: bolder;
 }
 
 .trybewarts-login {
