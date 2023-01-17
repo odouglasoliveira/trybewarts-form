@@ -22,8 +22,8 @@ function activeBtn() {
   }
 }
 
-checkbox.addEventListener('click', activeBtn)
+checkbox.addEventListener('click', activeBtn);
 
 window.onload = () => {
   btnSubmit.disabled = true;
-}
+};

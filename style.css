@@ -8,6 +8,7 @@
   display: flex;
   background-color: rgb(50, 167, 145);
   justify-content: space-between;
+  color: white;
 }
 
 .trybewarts-header-logo {
@@ -26,6 +27,8 @@
   height: 33px;
   border-radius: 5px;
   margin: 0 7px;
+  background-color: rgb(67, 44, 131);
+  color: white;
 }
 
 .trybewarts-login {
@@ -34,6 +37,8 @@
 
 main {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #evaluation-form {
@@ -64,3 +69,11 @@ main {
   display: flex;
 }
 
+footer {
+  background-color: rgb(60, 64, 74);
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
