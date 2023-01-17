@@ -9,10 +9,13 @@
   background-color: rgb(50, 167, 145);
   justify-content: space-between;
   color: white;
+  align-items: center;
+  height: 50px;
 }
 
 .trybewarts-header-logo {
-  width: 100px;
+  width: 50px;
+  padding: 5px 15px;
 }
 
 .trybewarts-login input {
@@ -85,4 +88,5 @@ footer {
 
 #counter {
   align-self: flex-end;
+  font-size: small;
 }
