@@ -4,8 +4,10 @@
   font-family: Inknut Antiqua, serif;
 }
 
-body {
-  width: 100%;
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .header {
@@ -14,28 +16,45 @@ body {
   justify-content: space-between;
   color: white;
   align-items: center;
-  height: 50px;
 }
 
 .trybewarts-header-logo {
-  width: 50px;
+  width: 80px;
   padding: 5px 15px;
 }
 
 .trybewarts-login input {
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
   margin: 0 2px;
+  padding: 0 10px;
 }
 
 .trybewarts-login button {
-  width: 100px;
-  height: 33px;
+  width: 150px;
+  height: 40px;
   border-radius: 5px;
   margin: 0 7px;
+  font-weight: bold;
   background-color: rgb(67, 44, 131);
   color: white;
+  cursor: pointer;
+}
+
+button {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.trybewarts-login button:hover {
+  transition: 200ms;
+  background-color: rgb(46, 27, 97);
 }
 
 .trybewarts-login {
@@ -46,7 +65,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 8% 0;
+  margin: 5% 0;
 }
 
 #evaluation-form {
@@ -66,11 +85,17 @@ main {
 #div-label-radio {
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 
 .checkbox-content {
   display: flex;
   flex-direction: column;
+}
+
+.checkbox-options {
+  flex-wrap: wrap;
+  display: flex;
 }
 
 #preferencias {
@@ -105,4 +130,22 @@ footer {
 #counter {
   align-self: flex-end;
   font-size: small;
+}
+
+#username-section input {
+  width: 49%;
+}
+
+#house-section input {
+  width: 49%;
+}
+
+#house-section {
+  margin-bottom: 20px;
+}
+
+form p {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
 }

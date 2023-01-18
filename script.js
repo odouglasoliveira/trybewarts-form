@@ -19,8 +19,12 @@ button.addEventListener('click', checkForm);
 function activeBtn() {
   if (checkbox.checked) {
     btnSubmit.disabled = false;
+    btnSubmit.style.backgroundColor = 'rgb(67, 44, 131)'
+    btnSubmit.style.color = 'white'
   } else {
     btnSubmit.disabled = true;
+    btnSubmit.style.backgroundColor = ''
+    btnSubmit.style.color = ''
   }
 }
 
