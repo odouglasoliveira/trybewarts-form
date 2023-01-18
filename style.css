@@ -4,6 +4,10 @@
   font-family: Inknut Antiqua, serif;
 }
 
+body {
+  width: 100%;
+}
+
 .header {
   display: flex;
   background-color: rgb(50, 167, 145);
@@ -40,8 +44,9 @@
 
 main {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  margin: 8% 0;
 }
 
 #evaluation-form {
@@ -79,6 +84,17 @@ footer {
   color: white;
   text-align: center;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#textarea {
+  resize: none;
+}
+
+#textarea:active {
+  border: 1px solid rgb(67, 44, 131);
 }
 
 #container-textarea {
