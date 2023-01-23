@@ -4,8 +4,11 @@ const checkbox = document.getElementById('agreement');
 const textarea = document.getElementById('textarea');
 const contadora = document.getElementById('counter');
 
+let fullname; let email; let house; let family; let message; let skill; let
+  avaliation;
+
 function checkForm() {
-  const email = document.getElementById('email');
+  email = document.getElementById('email');
   const password = document.getElementById('password');
   if (email.value === 'tryber@teste.com' && password.value === '123456') {
     window.alert('Olá, Tryber!');
@@ -19,12 +22,12 @@ button.addEventListener('click', checkForm);
 function activeBtn() {
   if (checkbox.checked) {
     btnSubmit.disabled = false;
-    btnSubmit.style.backgroundColor = 'rgb(67, 44, 131)'
-    btnSubmit.style.color = 'white'
+    btnSubmit.style.backgroundColor = 'rgb(67, 44, 131)';
+    btnSubmit.style.color = 'white';
   } else {
     btnSubmit.disabled = true;
-    btnSubmit.style.backgroundColor = ''
-    btnSubmit.style.color = ''
+    btnSubmit.style.backgroundColor = '';
+    btnSubmit.style.color = '';
   }
 }
 
@@ -52,29 +55,33 @@ formData.id = 'form-data';
 
 function collectFullname() {
   const firstname = document.getElementById('input-name').value;
+  if (!firstname) throw new Error('Insira seu nome');
   const lastname = document.getElementById('input-lastname').value;
-  const fullname = `Nome: ${firstname} ${lastname}`;
-  formData.appendChild(createParagraph(fullname));
+  if (!lastname) throw new Error('Insira seu sobrenome');
+  fullname = `Nome: ${firstname} ${lastname}`;
+  return fullname;
 }
 
 function collectEmail() {
-  const email = `Email: ${document.getElementById('input-email').value}`;
-  formData.appendChild(createParagraph(email));
+  email = `Email: ${document.getElementById('input-email').value}`;
+  if (!document.getElementById('input-email').value) throw new Error('Insira seu email');
+  return email;
 }
 
 function collectHouse() {
-  const house = `Casa: ${document.getElementById('house').value}`;
-  formData.appendChild(createParagraph(house));
+  house = `Casa: ${document.getElementById('house').value}`;
+  if (!document.getElementById('house').value) throw new Error('Escolha uma casa');
+  return house;
 }
 
 function collectFamily() {
-  const family = `Família: ${document.getElementById('evaluation-form').family.value}`;
-  formData.appendChild(createParagraph(family));
+  family = `Família: ${document.getElementById('evaluation-form').family.value}`;
+  return family;
 }
 
 function collectMessage() {
-  const message = `Observações: ${document.getElementById('textarea').value}`;
-  formData.appendChild(createParagraph(message));
+  message = `Observações: ${document.getElementById('textarea').value}`;
+  return message;
 }
 
 function collectSkills() {
@@ -85,30 +92,41 @@ function collectSkills() {
       skills.push(checkboxes[i].value);
     }
   }
-  const skill = `Matérias: ${skills.join(', ')}`;
-  formData.appendChild(createParagraph(skill));
+  skill = `Matérias: ${skills.join(', ')}`;
+  return skill;
 }
 
 function collectAvaliation() {
-  const avaliation = `Avaliação: ${document.querySelector('input[name=\'rate\']:checked').value}`;
-  formData.appendChild(createParagraph(avaliation));
+  avaliation = `Avaliação: ${document.querySelector('input[name=\'rate\']:checked').value}`;
+  return avaliation;
 }
 
 function showUserData() {
   const page = document.getElementById('main-content');
   const form = document.getElementById('evaluation-form');
   form.style.display = 'none';
+  formData.appendChild(createParagraph(fullname));
+  formData.appendChild(createParagraph(email));
+  formData.appendChild(createParagraph(house));
+  formData.appendChild(createParagraph(family));
+  formData.appendChild(createParagraph(skill));
+  formData.appendChild(createParagraph(avaliation));
+  formData.appendChild(createParagraph(message));
   page.insertBefore(formData, document.getElementById('trybewarts-forms-logo'));
 }
 
 btnSubmit.addEventListener('click', (event) => {
   event.preventDefault();
-  collectFullname();
-  collectEmail();
-  collectHouse();
-  collectFamily();
-  collectSkills();
-  collectAvaliation();
-  collectMessage();
-  showUserData();
+  try {
+    collectFullname();
+    collectEmail();
+    collectHouse();
+    collectFamily();
+    collectSkills();
+    collectAvaliation();
+    collectMessage();
+    showUserData();
+  } catch (error) {
+    window.alert(error.message);
+  }
 });
