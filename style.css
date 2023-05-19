@@ -23,6 +23,12 @@ html {
   padding: 5px 15px;
 }
 
+:-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 12px;
+  font-weight: 900;
+  color: rgb(166, 165, 163);
+}
+
 .trybewarts-login input {
   width: 150px;
   height: 40px;
@@ -74,6 +80,13 @@ main {
   flex-direction: column;
 }
 
+#evaluation-form h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+
 #trybewarts-forms-logo {
   height: 500px;
 }
@@ -103,15 +116,13 @@ main {
 }
 
 footer {
-  margin-top: 30px;
+  position: fixed;
+  bottom: 0;
   font-size: small;
   background-color: rgb(60, 64, 74);
   color: white;
   text-align: center;
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 #textarea {
@@ -130,6 +141,40 @@ footer {
 #counter {
   align-self: flex-end;
   font-size: small;
+}
+
+#username-section {
+  margin-bottom: 10px;
+}
+
+#username-section input {
+  width: 47%;
+  height: 40px;
+}
+
+#house-section {
+  margin-bottom: 15px;
+}
+
+#house-section input {
+  width: 47%;
+  height: 42px;
+}
+
+#house {
+  width: 40.6%;
+  border: 0;
+  border-radius: 5px;
+  height: 42px;
+  padding-left: 15px;
+}
+
+#submit-btn {
+  background-color: rgb(100, 72, 167);
+  border: 0;
+  color: white;
+  border-radius: 6px;
+  height: 35px;
 }
 
 #username-section input {
